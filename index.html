@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منوی اندروید</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menu button {
+            background-color: #1F1F1F;
+            color: #FFFFFF;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .menu button:hover {
+            background-color: #00BCD4;
+            transform: scale(1.05);
+        }
+
+        .menu button:active {
+            background-color: #007B8A;
+            transform: scale(0.95);
+        }
+  
+   .header {
+            background-color: #222;
+            color: #E0E0E0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple) 1;
+            animation: gradient-animation 10s linear infinite;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .menu {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header .menu a {
+            color: #E0E0E0;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .header .menu a:hover {
+            color: #00BCD4;
+        }
+
+        .about {
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 10px;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple) 1;
+            animation: gradient-animation 10s linear infinite;
+        }
+
+        .about h2 {
+            color: #00BCD4;
+        }
+
+        .about p {
+            line-height: 1.6;
+            color: #E0E0E0;
+        }
+  
+  
+    </style>
+</head>
+<body>
+<div class="header">
+        <div class="logo">IRMA VPN</div>
+        
+        </div>
+    </div>
+    <div class="menu">
+        <a href="همراه اول.html"><button>&thinsp;همراه اول&thinsp;</button></a>
+        <a href=""><button>&thinsp;&thinsp;&thinsp;ایرانسل&thinsp;&thinsp;&thinsp;</button></a>
+        <a href=""><button>&thinsp;&thinsp;&thinsp;درباره ما&thinsp;&thinsp;</button></a>
+        <a href=""><button>تماس با ما</button></a>
+    </div>
+
+</body>
+</html>

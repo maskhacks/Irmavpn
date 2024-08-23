@@ -1,1 +1,360 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست سرورها</title>
+    <style>
+        body {
+            background-color: black;
+            color: #E0E0E0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            direction: rtl;
+        }
 
+        h2 {
+            color: #00BCD4;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .server-box {
+            background-color: #111;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple) 1;
+            overflow: hidden;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            animation: gradient-animation 10s linear infinite;
+        }
+
+        .server-box p {
+            background-color: #333;
+            padding: 15px;
+            margin: 0;
+            border-radius: 10px;
+            color: #FFFFFF;
+            max-height: 50px;
+            overflow-y: auto;
+            overflow-x: auto;
+            white-space: nowrap;
+            flex-grow: 1;
+        }
+
+        .server-number {
+            margin-left: 10px;
+            color: #00BCD4;
+        }
+
+        .copy-btn {
+    margin-left: 3px;
+    margin-right: 3px; /* فاصله بیشتر از متن سرور */
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+        .copy-btn:hover {
+            background-color: #777;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+            }
+            50% {
+                border-image-source: linear-gradient(225deg, red, orange, yellow, green, blue, purple);
+            }
+            100% {
+                border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+            }
+        }
+
+  
+        .header {
+            background-color: #222;
+            color: #E0E0E0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple) 1;
+            animation: gradient-animation 10s linear infinite;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .menu {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header .menu a {
+            color: #E0E0E0;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .header .menu a:hover {
+            color: #00BCD4;
+        }
+
+        .about {
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 10px;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple) 1;
+            animation: gradient-animation 10s linear infinite;
+        }
+
+        .about h2 {
+            color: #00BCD4;
+        }
+
+        .about p {
+            line-height: 1.6;
+            color: #E0E0E0;
+        }
+  
+  
+    </style>
+
+
+
+
+</head>
+<body>
+
+  
+  <div class="header">
+        <div class="logo">IRMA VPN</div>
+        <div class="menu">
+            <a href="#servers">سرورها</a>
+            <a href="#about">درباره ما</a>
+            <a href="#contact">تماس با ما</a>
+        </div>
+    </div>
+  
+  
+  
+    <h2>لیست سرورهای IRMA</h2>
+
+
+    <div class="server-box">
+        <p id="server1">warp://[2606:4700:d1::2081:1830:932b:e6d8]:8319/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server1')">کپی</button>
+        <span class="server-number">سرور ۱</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server2">warp://[2606:4700:d1::20b4:1296:c165:be6b]:8319/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server2')">کپی</button>
+        <span class="server-number">سرور ۲</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server3">warp://[2606:4700:d1::d4e7:ff07:7d6b:9462]:878/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server3')">کپی</button>
+        <span class="server-number">سرور ۳</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server4">warp://[2606:4700:d0::2d5:3044:e737:6506]:2506/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server4')">کپی</button>
+        <span class="server-number">سرور ۴</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server5">warp://[2606:4700:d1::20b4:1296:c165:be6b]:878/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server5')">کپی</button>
+        <span class="server-number">سرور ۵</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server6">warp://[2606:4700:d1::6070:6e86:2cd1:2b96]:8319/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server6')">کپی</button>
+        <span class="server-number">سرور ۶</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server7">warp://[2606:4700:d1::d042:9c9:8354:6fc5]:878/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server7')">کپی</button>
+        <span class="server-number">سرور ۷</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server8">warp://[2606:4700:d1::d8f0:44f6:685f:eddc]:878/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server8')">کپی</button>
+        <span class="server-number">سرور ۸</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server9">warp://[2606:4700:d1::de92:c8f4:9ffd:1cf1]:8319/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server9')">کپی</button>
+        <span class="server-number">سرور ۹</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server10">warp://[2606:4700:d1::eaeb:8a95:54c2:baf1]:878/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server10')">کپی</button>
+        <span class="server-number">سرور ۱۰</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server11">warp://[2606:4700:d1::f57a:824a:5831:b0e3]:8319/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server11')">کپی</button>
+        <span class="server-number">سرور ۱۱</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server12">warp://[2606:4700:d0::10c8:fa8b:cc6b:f5a2]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server12')">کپی</button>
+        <span class="server-number">سرور ۱۲</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server13">warp://[2606:4700:d0::1378:b9ec:a4fd:f061]:2506/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server13')">کپی</button>
+        <span class="server-number">سرور ۱۳</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server14">warp://[2606:4700:d0::166:f832:3c2e:9fd3]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server14')">کپی</button>
+        <span class="server-number">سرور ۱۴</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server15">warp://[2606:4700:d0::186a:2759:2c32:40ce]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server15')">کپی</button>
+        <span class="server-number">سرور ۱۵</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server16">warp://[2606:4700:d0::186a:2759:2c32:40ce]:2506/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server16')">کپی</button>
+        <span class="server-number">سرور ۱۶</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server17">warp://[2606:4700:d0::1c67:2079:c0b2:93cb]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server17')">کپی</button>
+        <span class="server-number">سرور ۱۷</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server18">warp://[2606:4700:d0::1db1:1ea2:340e:26c]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server18')">کپی</button>
+        <span class="server-number">سرور ۱۸</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server19">warp://[2606:4700:d0::208b:e1d0:3057:db13]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server19')">کپی</button>
+        <span class="server-number">سرور ۱۹</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server20">warp://[2606:4700:d0::20e7:5923:36e6:18c3]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server20')">کپی</button>
+        <span class="server-number">سرور ۲۰</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server21">warp://[2606:4700:d0::28d7:b110:4161:4913]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server21')">کپی</button>
+        <span class="server-number">سرور ۲۱</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server22">warp://[2606:4700:d0::36cb:2784:8828:7ff0]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server22')">کپی</button>
+        <span class="server-number">سرور ۲۲</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server23">warp://[2606:4700:d0::39b8:82c2:b6d4:2c36]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server23')">کپی</button>
+        <span class="server-number">سرور ۲۳</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server24">warp://[2606:4700:d0::45fa:9d85:cab0:4b8a]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server24')">کپی</button>
+        <span class="server-number">سرور ۲۴</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server25">warp://[2606:4700:d0::4622:26f6:1d8e:48c3]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server25')">کپی</button>
+        <span class="server-number">سرور ۲۵</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server26">warp://[2606:4700:d0::464f:cc12:bca1:440d]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server26')">کپی</button>
+        <span class="server-number">سرور ۲۶</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server27">warp://[2606:4700:d0::4de3:db09:4303:373]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server27')">کپی</button>
+        <span class="server-number">سرور ۲۷</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server28">warp://[2606:4700:d0::5de8:6202:446f:7f77]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server28')">کپی</button>
+        <span class="server-number">سرور ۲۸</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server29">warp://[2606:4700:d0::66f7:7cdb:3f07:16da]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server29')">کپی</button>
+        <span class="server-number">سرور ۲۹</span>
+    </div>
+
+    <div class="server-box">
+        <p id="server30">warp://[2606:4700:d0::73ac:bd7f:bc34:e0b7]:2371/?ifp=5-10#@irmavpn</p>
+        <button class="copy-btn" onclick="copyText('server30')">کپی</button>
+        <span class="server-number">سرور ۳۰</span>
+    </div>
+
+    <!-- سایر جعبه‌های سرور ادامه دارند -->
+
+    <script>
+        function copyText(elementId) {
+            var text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("سرور کپی شد!");
+            }, function(err) {
+                console.error("کپی کردن با مشکل مواجه شد!", err);
+            });
+        }
+    </script>
+
+</body>
+</html>

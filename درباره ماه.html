@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما</title>
+    <style>
+        body {
+            background-color: black;
+            color: #E0E0E0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        h2 {
+            color: #00BCD4;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .server-box {
+            background-color: #111;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple) 1;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            animation: gradient-animation 10s linear infinite;
+        }
+
+        .server-box p {
+            background-color: #333;
+            padding: 15px;
+            margin: 0;
+            border-radius: 10px;
+            color: #FFFFFF;
+            max-height: 50px;
+            overflow-y: auto;
+            overflow-x: auto;
+            white-space: nowrap;
+            flex-grow: 1;
+        }
+
+        .server-number {
+            margin-left: 10px;
+            color: #00BCD4;
+        }
+
+        .copy-btn {
+            margin-left: 3px;
+            margin-right: 3px;
+            padding: 5px 10px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .copy-btn:hover {
+            background-color: #777;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+            }
+
+            50% {
+                border-image-source: linear-gradient(225deg, red, orange, yellow, green, blue, purple);
+            }
+
+            100% {
+                border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+            }
+        }
+
+        .header {
+            background-color: #222;
+            color: #E0E0E0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple) 1;
+            animation: gradient-animation 10s linear infinite;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .menu {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header .menu a {
+            color: #E0E0E0;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .header .menu a:hover {
+            color: #00BCD4;
+        }
+
+        .about {
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 10px;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple) 1;
+            animation: gradient-animation 10s linear infinite;
+        }
+
+        .about h2 {
+            color: #00BCD4;
+        }
+
+        .about p {
+            line-height: 1.6;
+            color: #E0E0E0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">IRMA VPN</div>
+        <div class="menu">
+            <a href="#servers">سرورها</a>
+            <a href="#about">درباره ما</a>
+            <a href="#contact">تماس با ما</a>
+        </div>
+    </div>
+
+   
+
+    <!-- سایر جعبه‌های سرور ادامه دارند -->
+
+    <div class="about" id="about">
+        <h2>درباره ما</h2>
+        <p>
+            ما تیم برنامه‌نویسی <strong>Mask Hack</strong> هستیم؛ گروهی متشکل از علاقه‌مندان به فناوری و برنامه‌نویسی که با هدف ارائه خدمات رایگان VPN به کاربران تشکیل شده است. ما با عشق و انگیزه‌ای بزرگ، اپلیکیشن <strong>IRMA</strong> را توسعه داده‌ایم تا شما بدون نیاز به پرداخت هزینه برای VPN، به اینترنت آزاد دسترسی داشته باشید.
+        </p>
+        <p>
+            هدف ما در Mask Hack، کمک به شماست تا بدون دغدغه و نگرانی از بابت دسترسی به محتوای آنلاین، از اینترنت استفاده کنید. ما با تلاش فراوان، بهترین سرورها را پیدا کرده و به صورت رایگان در اختیار شما قرار می‌دهیم، زیرا معتقدیم که همه باید به اینترنت آزاد دسترسی داشته باشند.
+        </p>
+        <p>
+            ما هیچ منفعت مالی از این کار نداریم؛ تنها چیزی که از شما می‌خواهیم این است که با فالو کردن صفحه اینستاگرام و عضویت در کانال تلگرامی ما، به ما انرژی دهید تا بتوانیم با قدرت بیشتری به کار خود ادامه دهیم. انگیزه و لذت ما در این است که بدانیم شما از خدمات ما استفاده می‌کنید و هیچ مشکلی ندارید.
+        </p>
+    </div>
+
+    <script>
+        function copyText(elementId) {
+            var text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(function () {
+                alert("متن کپی شد!");
+            }, function (err) {
+                console.error("کپی کردن با مشکل مواجه شد!", err);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
